@@ -1,60 +1,62 @@
-<h1>New Job</h1>
+<div class="jobs-main">
+  <h1>New Job</h1>
 
-<%= form_for :job, url: jobs_path do |f| %>
-  <table>
+  <%= form_for :job, url: jobs_path do |f| %>
+    <table>
 
-    <tr>
-      <td>
-        <%= f.label :poster %>
-      </td>
-      <td>
-        <%= f.text_field :poster %>
-      </td>
-    </tr>
+      <tr>
+        <td>
+          <%= f.label :poster %>
+        </td>
+        <td>
+          <%= f.text_field :poster %>
+        </td>
+      </tr>
 
-    <tr>
-      <td>
-        <%= f.label :category %>
-      </td>
-      <td>
-        <%= f.collection_select :category, Job.category_list, :first, :second %>
-      </td>
-    </tr>
+      <tr>
+        <td>
+          <%= f.label :category %>
+        </td>
+        <td>
+          <%= f.collection_select :category, Job.category_list, :first, :second %>
+        </td>
+      </tr>
 
-    <tr>
-      <td>
-        <%= f.label :location %>
-      </td>
-      <td>
-        <%= f.collection_select :location, Job.location_list, :first, :second %>
-      </td>
-    </tr>
+      <tr>
+        <td>
+          <%= f.label :location %>
+        </td>
+        <td>
+          <%= f.collection_select :location, Job.location_list, :first, :second %>
+        </td>
+      </tr>
 
-    <tr>
-      <td>
-        <%= f.label :status %>
-      </td>
-      <td>
-        <%= f.collection_select :status, Job.status_list, :first, :second %>
-      </td>
-    </tr>
+      <tr>
+        <td>
+          <%= f.label :status %>
+        </td>
+        <td>
+          <%= f.collection_select :status, Job.status_list, :first, :second %>
+        </td>
+      </tr>
 
-    <tr>
-      <td>
-        <%= f.label :description %>
-      </td>
-      <td>
-        <%= f.text_area :description %>
-      </td>
-    </tr>
+      <tr>
+        <td>
+          <%= f.label :description %>
+        </td>
+        <td>
+          <%= f.text_area :description %>
+        </td>
+      </tr>
 
-    <tr>
-      <td>
-      </td>
-      <td>
-        <%= f.submit %>
-      </td>
-    </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <%= f.submit "Add Job" %>
+        </td>
+      </tr>
 
-  </table>
-<% end %>
+    </table>
+  <% end %>
+</div>
