@@ -1,22 +1,60 @@
 <h1>New Job</h1>
 
 <%= form_for :job, url: jobs_path do |f| %>
-  <p>
-    <%= f.label :poster %><br>
-    <%= f.text_field :poster %>
-  </p>
+  <table>
 
-  <p>
-    <%= f.label :category %><br>
-    <%= f.collection_select :category, Job.categories.map{ |c| [c.first, c.first.humanize] }, :first, :second %>
-  </p>
+    <tr>
+      <td>
+        <%= f.label :poster %>
+      </td>
+      <td>
+        <%= f.text_field :poster %>
+      </td>
+    </tr>
 
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
+    <tr>
+      <td>
+        <%= f.label :category %>
+      </td>
+      <td>
+        <%= f.collection_select :category, Job.category_list, :first, :second %>
+      </td>
+    </tr>
 
-  <p>
-    <%= f.submit %>
-  </p>
+    <tr>
+      <td>
+        <%= f.label :location %>
+      </td>
+      <td>
+        <%= f.collection_select :location, Job.location_list, :first, :second %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= f.label :status %>
+      </td>
+      <td>
+        <%= f.collection_select :status, Job.status_list, :first, :second %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= f.label :description %>
+      </td>
+      <td>
+        <%= f.text_area :description %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      </td>
+      <td>
+        <%= f.submit %>
+      </td>
+    </tr>
+
+  </table>
 <% end %>
