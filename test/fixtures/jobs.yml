@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  poster: MyString
+  category: 1
+  location: 1
+  description: MyText
+
+two:
+  poster: MyString
+  category: 1
+  location: 1
+  description: MyText
