@@ -7,11 +7,23 @@
   margin: 0 auto;
 }
 
+.jobs-main table td {
+  padding: 5px 0px;
+}
+
 .jobs-main table label {
   display: block;
   width: 100px;
 }
 
-.jobs-main table input.wide {
-  width: 300px;
+.jobs-main table .wide-input,
+.jobs-main table select {
+  width: 200px;
+  border: 1px solid;
+  border-radius: 3px;
+  background: transparent;
+}
+
+.jobs-main .button-cell {
+  text-align: right;
 }

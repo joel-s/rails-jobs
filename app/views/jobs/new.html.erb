@@ -1,5 +1,5 @@
 <div class="jobs-main">
-  <h1>New Job</h1>
+  <h1>Add Job</h1>
 
   <%= form_for :job, url: jobs_path do |f| %>
     <table>
@@ -9,7 +9,7 @@
           <%= f.label :poster %>
         </td>
         <td>
-          <%= f.text_field :poster %>
+          <%= f.text_field :poster, :class => 'wide-input'  %>
         </td>
       </tr>
 
@@ -45,14 +45,14 @@
           <%= f.label :description %>
         </td>
         <td>
-          <%= f.text_area :description %>
+          <%= f.text_area :description, :rows => 10, :class => 'wide-input' %>
         </td>
       </tr>
 
       <tr>
         <td>
         </td>
-        <td>
+        <td class="button-cell">
           <%= f.submit "Add Job" %>
         </td>
       </tr>
