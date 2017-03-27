@@ -1,2 +1,15 @@
 <h1>JerbyJerbs: Jobs</h1>
-<p>TODO: Add links</p>
+
+<table>
+  <tr>
+    <th>...</th>
+    <th>...</th>
+  </tr>
+
+  <% @jobs.each do |job| %>
+    <tr>
+      <td><%= job.poster %></td>
+      <td><%= job.location %></td>
+    </tr>
+  <% end %>
+</table>

@@ -13,9 +13,9 @@ class Job < ActiveRecord::Base
     return list
   end
 
-  enum status: [:no_status, :created, :assigned, :in_progress, :completed]
-  def self.status_list
-    list = Job.statuses.map { |e| [e.first, e.first.humanize] }
+  enum statusval: [:no_status, :created, :assigned, :in_progress, :completed]
+  def self.statusval_list
+    list = Job.statusvals.map { |e| [e.first, e.first.humanize] }
     list[0][1] = "Select"
     return list
   end
