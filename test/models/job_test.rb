@@ -36,7 +36,4 @@ class JobTest < ActiveSupport::TestCase
     new_job = jobs[2]
     assert new_job[:poster] == "Bob", "correctly set poster"
   end
-  # test "the truth" do
-  #   assert true
-  # end
 end

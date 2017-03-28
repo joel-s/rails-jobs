@@ -7,17 +7,37 @@
   margin: 0 auto;
 }
 
-.jobs-main table td {
+.jobs-main table.index {
+  border-collapse: collapse;
+
+  th, td {
+    text-align: left;
+    padding: 8px 16px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+}
+
+// Styles for new/edit job post
+
+.jobs-main table.edit td {
   padding: 5px 0px;
 }
 
-.jobs-main table label {
+.jobs-main table.edit label {
   display: block;
   width: 100px;
 }
 
-.jobs-main table .wide-input,
-.jobs-main table select {
+.jobs-main table.edit .wide-input,
+.jobs-main table.edit select {
   width: 200px;
   border: 1px solid;
   border-radius: 3px;

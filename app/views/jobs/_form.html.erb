@@ -1,0 +1,58 @@
+<%= form_for :job, url: jobs_path do |f| %>
+  <table class="edit">
+
+    <tr>
+      <td>
+        <%= f.label :poster %>
+      </td>
+      <td>
+        <%= f.text_field :poster, :class => 'wide-input'  %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= f.label :category %>
+      </td>
+      <td>
+        <%= f.collection_select :category, Job.category_list, :first, :second %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= f.label :location %>
+      </td>
+      <td>
+        <%= f.collection_select :location, Job.location_list, :first, :second %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= f.label :statusval, "Status" %>
+      </td>
+      <td>
+        <%= f.collection_select :statusval, Job.statusval_list, :first, :second %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= f.label :description %>
+      </td>
+      <td>
+        <%= f.text_area :description, :rows => 10, :class => 'wide-input' %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      </td>
+      <td class="button-cell">
+        <%= f.submit "Save Job" %>
+      </td>
+    </tr>
+
+  </table>
+<% end %>
