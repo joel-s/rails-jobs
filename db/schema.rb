@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322001634) do
+ActiveRecord::Schema.define(version: 20170327181841) do
 
   create_table "jobs", force: :cascade do |t|
     t.string   "poster"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170322001634) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "statusval"
   end
 
 end

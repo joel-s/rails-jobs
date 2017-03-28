@@ -1,15 +1,25 @@
 <h1>JerbyJerbs: Jobs</h1>
 
+<!-- 	Date Poster Category Location Status Actions -->
+
 <table>
   <tr>
-    <th>...</th>
-    <th>...</th>
+    <th>Date</th>
+    <th>Poster</th>
+    <th>Category</th>
+    <th>Location</th>
+    <th>Status</th>
+    <th>Actions</th>
   </tr>
 
   <% @jobs.each do |job| %>
     <tr>
+      <td><%= job.created_at.strftime('%m/%d/%Y') %></td>
       <td><%= job.poster %></td>
-      <td><%= job.location %></td>
+      <td><%= job.category.humanize %></td>
+      <td><%= job.location.humanize %></td>
+      <td><%= job.statusval.humanize %></td>
+      <td>Edit</td>
     </tr>
   <% end %>
 </table>

@@ -1,13 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  poster: MyString
+  poster: Poster1
   category: 1
-  location: 1
-  description: MyText
+  location: 2
+  description: Brief description 1
+  created_at: 2001-01-01 9:30:00
+  statusval: 3
 
 two:
-  poster: MyString
+  poster: Poster2
   category: 1
-  location: 1
-  description: MyText
+  location: 2
+  description: Brief description 2
+  created_at: 2001-01-01 10:30:00
+  statusval: 3

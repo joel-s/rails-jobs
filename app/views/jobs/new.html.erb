@@ -33,7 +33,7 @@
 
       <tr>
         <td>
-          <%= f.label :status %>
+          <%= f.label :statusval, "Status" %>
         </td>
         <td>
           <%= f.collection_select :statusval, Job.statusval_list, :first, :second %>

@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   def index
-    @jobs = Job.all
+    @jobs = Job.all.sort_by &:created_at
   end
 
   def new
@@ -8,12 +8,12 @@ class JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
-    @job.save
+    @job.save!
     redirect_to '/jobs'
   end
 
   private
   def job_params
-    params.require(:job).permit(:category, :location, :statusval, :description)
+    params.require(:job).permit(:poster, :category, :location, :statusval, :description)
   end
 end
