@@ -31,9 +31,13 @@ class JobTest < ActiveSupport::TestCase
       statusval: :created, description: "Do some cleaning at 1 Fart St.")
     job.save!
 
-    jobs = Job.all
-    assert jobs.length == 3, "jobs.length is #{jobs.length}"
+    jobs = Job.all.sort_by &:created_at
+    assert_equal jobs.length, 3, "jobs.length is #{jobs.length}"
     new_job = jobs[2]
-    assert new_job[:poster] == "Bob", "correctly set poster"
+    assert_equal new_job[:poster], "Bob"
+    assert_equal new_job[:category], Job.categories[:cleaning]
+    assert_equal new_job[:location], Job.locations[:boston]
+    assert_equal new_job[:statusval], Job.statusvals[:created]
+    assert_equal new_job[:description], "Do some cleaning at 1 Fart St."
   end
 end

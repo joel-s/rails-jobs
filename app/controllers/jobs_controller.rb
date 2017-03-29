@@ -29,7 +29,7 @@ class JobsController < ApplicationController
     end
   end
 
-  private
+private
   def job_params
     params.require(:job).permit(:poster, :category, :location, :statusval, :description)
   end
