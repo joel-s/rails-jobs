@@ -6,25 +6,27 @@
   </div>
   <h1>Job Postings</h1>
 
-  <table class="index">
-    <tr>
-      <th>Date</th>
-      <th>Poster</th>
-      <th>Category</th>
-      <th>Location</th>
-      <th>Status</th>
-      <th>Actions</th>
-    </tr>
-
-    <% @jobs.each do |job| %>
+  <div style="overflow-x:auto;">
+    <table class="index">
       <tr>
-        <td><%= job.created_at.strftime('%m/%d/%Y') %></td>
-        <td><%= job.poster %></td>
-        <td><%= job.category.humanize %></td>
-        <td><%= job.location.humanize %></td>
-        <td><%= job.statusval.humanize %></td>
-        <td><%= link_to "Edit", [:edit, job] %></td>
+        <th>Date</th>
+        <th>Poster</th>
+        <th>Category</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th>Actions</th>
       </tr>
-    <% end %>
-  </table>
+
+      <% @jobs.each do |job| %>
+        <tr>
+          <td><%= job.created_at.strftime('%m/%d/%Y') %></td>
+          <td><%= job.poster %></td>
+          <td><%= job.category.humanize %></td>
+          <td><%= job.location.humanize %></td>
+          <td><%= job.statusval.humanize %></td>
+          <td><%= link_to "Edit", [:edit, job] %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>
