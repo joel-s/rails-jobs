@@ -1,4 +1,21 @@
-<%= form_for :job, url: jobs_path do |f| %>
+<%= form_for @job do |f| %>
+
+  <% if @job.errors.full_messages.any? %>
+    <div class="errors">
+      <h2>
+        Please correct
+        <%= pluralize(@job.errors.full_messages.length, "error") %>
+      </h2>
+      <ul>
+        <% @job.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- <%= @job.errors.full_messages.first if @job.errors.any? %> -->
+
   <table class="edit">
 
     <tr>
@@ -6,7 +23,7 @@
         <%= f.label :poster %>
       </td>
       <td>
-        <%= f.text_field :poster, :class => 'wide-input'  %>
+        <%= f.text_field :poster, :class => 'wide-input' %>
       </td>
     </tr>
 
