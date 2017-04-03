@@ -8,6 +8,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'byebug'
