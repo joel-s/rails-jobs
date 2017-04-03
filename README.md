@@ -1,3 +1,10 @@
+# Rails Jobs sample app
+
+## Overview
+
+This project is an experiment in getting my hands dirty with Rails after a few years of not working with Rails (or Ruby). It started out as a "tech test" for a potential employer. The original requirements are below.
+
+
 # Jerb Interview
 
 ## Overview
@@ -10,8 +17,3 @@ This is a multi-phased engagement. The goal of the first phase is to automate th
 
 ## Requirements
 Create a rails app based on the specifications listed above. You don't need to go overboard BUT a core level of modern development best practices need to be present. The app also needs to look presentable and have a basic level of responsive behavior. The skeleton codebase contains Bootstrap, but any UI framework may be used. The codebase needs to be developed on a separate branch and Pull Requested into the "submissions" branch. Please feel free to ask questions about the project with other Gnar Team Members.
-
-## Getting Started
-The skeleton app contains enough gems to get going (feel free to add more) and a Vagrant configuration file. Simply run:
-
-    $ vagrant up
