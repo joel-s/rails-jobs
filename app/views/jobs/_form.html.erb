@@ -14,19 +14,16 @@
     </div>
   <% end %>
 
-  <div class="table-container">
-    <table class="edit">
+    <div class="form-horizontal">
 
-      <tr>
-        <td>
-          <%= f.label :poster %>
-        </td>
-        <td>
-          <%= f.text_field :poster, :class => 'wide-input' %>
-        </td>
-      </tr>
+      <div class="form-group">
+        <%= f.label :poster, class: "control-label col-sm-3" %>
+        <div class="col-sm-6">
+          <%= f.text_field :poster, class: 'form-control' %>
+        </div>
+      </div>
 
-      <tr>
+      <!-- <tr>
         <td>
           <%= f.label :category %>
         </td>
@@ -60,16 +57,13 @@
         <td>
           <%= f.text_area :description, :rows => 10, :class => 'wide-input' %>
         </td>
-      </tr>
+      </tr> -->
 
-      <tr>
-        <td>
-        </td>
-        <td class="button-cell">
-          <%= f.submit "Save Job" %>
-        </td>
-      </tr>
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-6">
+          <%= f.submit "Save Job", class: "btn btn-primary pull-right" %>
+        </div>
+      </div>
 
-    </table>
   </div>
 <% end %>
