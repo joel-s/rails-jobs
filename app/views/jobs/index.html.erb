@@ -18,7 +18,7 @@
       </tr>
 
       <% @jobs.each do |job| %>
-        <tr>
+        <tr data-link="<%= job_path(job) %>">
           <td><%= job.created_at.strftime('%m/%d/%Y') %></td>
           <td><%= job.poster %></td>
           <td><%= job.category.humanize %></td>
