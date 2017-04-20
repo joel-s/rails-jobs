@@ -18,13 +18,14 @@
       </tr>
 
       <% @jobs.each do |job| %>
-        <tr data-link="<%= job_path(job) %>">
+        <tr>
           <td><%= job.created_at.strftime('%m/%d/%Y') %></td>
           <td><%= job.poster %></td>
           <td><%= job.category.humanize %></td>
           <td><%= job.location.humanize %></td>
           <td><%= job.statusval.humanize %></td>
-          <td><%= link_to "Edit", [:edit, job] %></td>
+          <td><%= link_to "View", job_path(job) %> &nbsp;
+          <%= link_to "Edit", [:edit, job] %></td>
         </tr>
       <% end %>
     </table>
