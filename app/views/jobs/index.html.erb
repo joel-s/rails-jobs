@@ -1,0 +1,33 @@
+<div class="jobs-main">
+  <div class="new-button-cell">
+    &nbsp;
+    <br>
+    <%= link_to "Add Job", new_job_path, class: "btn btn-primary" %>
+  </div>
+  <h1>Job Postings</h1>
+
+  <div class="table-container">
+    <table class="index">
+      <tr>
+        <th>Date</th>
+        <th>Poster</th>
+        <th>Category</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @jobs.each do |job| %>
+        <tr>
+          <td><%= job.created_at.strftime('%m/%d/%Y') %></td>
+          <td><%= job.poster %></td>
+          <td><%= job.category.humanize %></td>
+          <td><%= job.location.humanize %></td>
+          <td><%= job.statusval.humanize %></td>
+          <td><%= link_to "View", job_path(job) %> &nbsp;
+          <%= link_to "Edit", [:edit, job] %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

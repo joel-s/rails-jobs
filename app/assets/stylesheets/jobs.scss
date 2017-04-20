@@ -1,0 +1,69 @@
+// Styles for *all* jobs pages
+
+.jobs-main {
+  display: table;
+  margin: 0 auto;
+}
+
+.jobs-main .table-container {
+  overflow-x: auto;
+}
+
+// Styles for index page
+
+.jobs-main div.new-button-cell {
+  width: 100px;
+  height: 50px;
+  float: right;
+  text-align: right;
+}
+
+.jobs-main table.index {
+  border-collapse: collapse;
+
+  th, td {
+    text-align: left;
+    padding: 8px 16px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+}
+
+// Styles for new/edit job page
+
+.jobs-main div.errors {
+  color: red;
+  padding: 10px;
+}
+
+.jobs-main table.edit td {
+  padding: 5px 0px;
+}
+
+.jobs-main table.edit label {
+  display: block;
+  width: 100px;
+}
+
+.jobs-main table.edit .wide-input {
+  width: 200px;
+  border: 1px solid;
+}
+
+.jobs-main table.edit select {
+  width: 200px;
+  border: 1px solid;
+  border-radius: 3px;
+  background: transparent;
+}
+
+.jobs-main .button-cell {
+  text-align: right;
+}
