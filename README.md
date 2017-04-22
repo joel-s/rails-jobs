@@ -2,7 +2,14 @@
 
 ## Overview
 
-This project is an experiment in getting my hands dirty with Rails after a few years of not working with Rails (or Ruby). It started out as a "tech test" for a potential employer. The original requirements are below.
+This project is an experiment in getting my hands dirty with Rails after a few years of not working with Rails (or Ruby). It started out as a "tech test" for a potential employer. The original requirements are in the **Jerb Interview** section below.
+
+# Setup
+
+- Install ruby, bundle, etc.
+- Start `bin/webpack-dev-server` in one window
+- Start `bin/rails s` in another window
+- Navigate to` localhost:3000`
 
 
 # Jerb Interview
