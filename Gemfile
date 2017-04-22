@@ -9,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'autoprefixer-rails'
+gem 'webpacker', github: 'rails/webpacker'
 
 group :development, :test do
   gem 'byebug'
