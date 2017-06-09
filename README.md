@@ -7,7 +7,7 @@ This project is an experiment in getting my hands dirty with Rails after a few y
 # Setup
 
 - Install ruby, bundle, etc.
-- Start `bin/webpack-dev-server` in one window
+- Start `bin/webpack-dev-server` in one window (Note: You can skip this step if you want; webpacker was added with the plan of adding some JavaScript [React.js] functionality such as sorting the table of jobs.)
 - Start `bin/rails s` in another window
 - Navigate to` localhost:3000`
 
